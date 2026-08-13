@@ -1,6 +1,6 @@
 # homelab
 
-// one or two sentences: what this is, why you made it, host hardware
+screw subscriptions imma host my own stuff now
 
 ---
 
@@ -12,6 +12,11 @@
 ---
 
 ## ARCHITECTURE / NETWORK
+
+### HOST SPECS
+
+
+### other stuff
 
 // this is the section people actually check for security understanding
 // answer directly:
