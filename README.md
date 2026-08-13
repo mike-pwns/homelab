@@ -1,6 +1,6 @@
 # homelab
 
-screw subscriptions imma host my own stuff now
+screw subscriptions imma host my own stuff now!!
 
 ---
 
