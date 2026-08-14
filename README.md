@@ -14,7 +14,8 @@ screw subscriptions imma host my own stuff now!!
 ## ARCHITECTURE / NETWORK
 
 ### HOST SPECS
-
+the host is just a computer, its not a laptop
+1TB storage
 
 ### other stuff
 
