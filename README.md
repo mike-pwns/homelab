@@ -20,9 +20,7 @@ a) I was already in the process of "de-googling". I haven't gotten to google pho
 
 b) friend pushed me to do it - I was gonna do it either way but I did it sooner thanks to them.
 
-(also its just not appropriate as a grown man to backup your data on the cloud)
-
-https://www.tiktok.com/@sandboxsessions/video/7611533386473114893
+(also [its just not appropriate as a grown man to backup your data on the cloud](https://www.tiktok.com/@sandboxsessions/video/7611533386473114893))
 
 ---
 
