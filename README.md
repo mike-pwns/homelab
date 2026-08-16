@@ -1,21 +1,41 @@
+> Note: this document will change overtime as I implement new services, etc. It is a "living document"
+> 
+> Project Status: ONLINE
+> 
+> Next Step: None
+
 # homelab
 
-screw subscriptions imma host my own stuff now!!
+This is just a repo where I can put info about my homelab - not really a project-project, but still a cool thing people can look at and know I do.
+
+The bulk of this is just me yapping in this readme about specs, services, reasoning, etc. A friend suggested I put compose files here too (without the actual info duh) so that I can just copy my setup on another machine if I ever get to that point - won't do that yet since I'm not too familiar with what I should/shouldn't make public. 
 
 ---
 
-## OVERVIEW
+## INSPIRATION
 
-// what the server physically is (Pi? mini PC? old laptop?), what OS, why you started this
-// note this was a friend-driven project if that's true — that's a fine reason, just be accurate
+The reason why I started a homelab (ie setup my own server) is mainly because: 
+
+a) I was already in the process of "de-googling". I haven't gotten to google photos yet, but I'll get to it soon, so setting up something like immich and getting used to it before I do would make the transition smoother.
+
+b) friend pushed me to do it - I was gonna do it either way but I did it sooner thanks to them.
+
+(also its just not appropriate as a grown man to backup your data on the cloud)
+
+https://www.tiktok.com/@sandboxsessions/video/7611533386473114893
 
 ---
 
 ## ARCHITECTURE / NETWORK
 
 ### HOST SPECS
-the host is just a computer, its not a laptop
-1TB storage
+- **Computer:** Desktop
+- **OS:** Debian GNU/Linux 13 (Trixie)
+- **CPU:** Intel Core i7-3770 @ 3.40 GHz
+- **RAM:** 16 GB DDR3 (2 × 8 GB, 1333 MT/s)
+- **Storage:** 1 TB (WDC WD1002FAEX-00Y9A0)
+- **GPU:** NVIDIA GeForce GTX 1050
+
 
 ### other stuff
 
@@ -29,6 +49,12 @@ recommendation: a simple diagram (even ASCII) showing Tailscale as the only ingr
 no forwarded ports, no public DNS record pointing at it.
 
 ---
+
+## ACCESS
+
+Most apps I just
+
+For accessing the server itself, I use SSH. If I'm not in my network I rely on tailscale, where I've setup a tailnet for my devices so that I can access the server.
 
 ## SERVICES
 
