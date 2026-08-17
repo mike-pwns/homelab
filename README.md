@@ -2,11 +2,11 @@
 > 
 > Project Status: ONLINE
 > 
-> Next Step: None
+> Next Step: finish this doc --> setup vikanja
 
 # homelab
 
-This is just a repo where I can put info about my homelab - not really a project-project, but still a cool thing people can look at and know I do.
+This is just a repo where I can put info about my homelab - not really a project-project, but still a cool thing I can share on here.
 
 The bulk of this is just me yapping in this readme about specs, services, reasoning, etc. A friend suggested I put compose files here too (without the actual info duh) so that I can just copy my setup on another machine if I ever get to that point - won't do that yet since I'm not too familiar with what I should/shouldn't make public. 
 
@@ -22,6 +22,8 @@ b) friend pushed me to do it - I was gonna do it either way but I did it sooner 
 
 (also [its just not appropriate as a grown man to backup your data on the cloud](https://www.tiktok.com/@sandboxsessions/video/7611533386473114893))
 
+https://www.instagram.com/reel/DWWaTlZEdoG/
+
 ---
 
 ## ARCHITECTURE / NETWORK
@@ -34,37 +36,62 @@ b) friend pushed me to do it - I was gonna do it either way but I did it sooner 
 - **Storage:** 1 TB (WDC WD1002FAEX-00Y9A0)
 - **GPU:** NVIDIA GeForce GTX 1050
 
+### FILE STRUCTURE
 
-### other stuff
+```
+├── services
+│   ├── immich
+│   │   └── immich-app
+│   ├── jellyfin
+│   │   ├── (dont worry bout this)
+│   │   ├── jellyfin
+│   │   ├── (dont worry bout this)
+│   │   ├── (dont worry bout this)
+│   │   ├── (dont worry bout this)
+│   │   └── (dont worry bout this)
+│   ├── minecraft
+│   │   └── minecraft
+│   ├── portainer
+│   └── tailscale
+└── storage
+    ├── immich
+    │   ├── media
+    │   └── postgres
+    └── jellyfin
+        ├── media
+        └── (dont worry bout this)
+```
 
-// this is the section people actually check for security understanding
-// answer directly:
-//   - is anything exposed to the public internet, or is it Tailscale-only?
-//   - how do you personally connect to it remotely?
-//   - one diagram or bullet list of: internet -> router -> server -> containers
+### CONNECTION SCHEME
 
-recommendation: a simple diagram (even ASCII) showing Tailscale as the only ingress point,
-no forwarded ports, no public DNS record pointing at it.
+So.. how do I actually connect to this server?
+
+Simple! If I'm on the right network, just SSH to the local ip that I know. 
+
+Device (laptop, phone) <---------------> Router (home) <---------------> Server
+
+Otherwise, I SSH via my tailnet (which uses wireguard protocol for e2e which is cool!):
+
+Device (laptop, phone) <---------------> Router <---------------> Tailscale servers <---------------> Router (home) <---------------> Server
+
+The reasoning for tailscale instead of something like setting up port forwarding is because if its setup by a noob (ahem), it can cause security vulnerabilities for a home network. Using tailscale, the server's access to the internet (my other devices) is very tightly controlled and in a way that even I could easily manage it through an app or a single command, `sudo tailscale up/down`. There are benefits to port forwarding, sure, but for my case where I'm just running my own services for myself, this is the simplest method for my case. And as a dear mentor of mine said:
+> "Simplicity scales, complexity fails!"
+
+This solution just requires me to connect to the tailnet and that's it - getting in between that, or heck even getting access points is pretty much impossible (as far as I know, but I frankly have a lot to learn) - the only way to access the server as a hacker ("bad actor" for the snotty nerds out there) is to find my tailnet account and get into it, which I guess they can have fun with. Honestly, even if they get the tailnet ip, they'd still need to get the credentials for the server itself :/
 
 ---
 
-## ACCESS
-
-Most apps I just
-
-For accessing the server itself, I use SSH. If I'm not in my network I rely on tailscale, where I've setup a tailnet for my devices so that I can access the server.
-
 ## SERVICES
 
-// table: Service | Purpose | Why this one
+Here's a small list of services and some details on why I use it.
 
 | Service | Purpose | Why |
 |---|---|---|
-| Jellyfin | media streaming | // your reason |
-| Immich | photo backup/library | // your reason |
-| Minecraft server | game server for friends | // your reason |
-| Portainer | container management/monitoring | // your reason |
-| Tailscale | private mesh VPN, no exposed ports | // your reason |
+| Jellyfin | media streaming | For streaming.. legally acquired.. stuff. Don't ask, don't tell. |
+| Immich | photo backup/library | Replacement for google photos. |
+| Minecraft server | game server for friends | This was the first thing I did. We don't use it anymore, we set it up on another server, but regardless it was a decent experience. 6/10. |
+| Portainer | container management/monitoring | Just a cool webUI for managing containers I heard of and wanted to try. |
+| Tailscale | VPN | Alternative to port forwarding - no exposed ports. Like my own personal internet on the internet! Cool tech honestly. |
 
 ---
 
@@ -103,6 +130,8 @@ For accessing the server itself, I use SSH. If I'm not in my network I rely on t
 ---
 
 ## KNOWN GAPS / ROADMAP
+
+- theres only 1 drive, 
 
 // bullet list, plain and honest:
 //   - no automated backups for Immich
