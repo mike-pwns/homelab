@@ -57,7 +57,11 @@ Otherwise, I SSH via my tailnet (which uses wireguard protocol for e2e which is 
 
 Device (laptop, phone) <----> Router <----> Tailscale servers <----> Router (home) <----> Server
 
-The reasoning for tailscale instead of something like setting up port forwarding is because if its setup by a noob (ahem), it can cause security vulnerabilities for a home network. Using tailscale, the server's access to the internet (my other devices) is very tightly controlled and in a way that even I could easily manage it through an app or a single command, `sudo tailscale up/down`. There are benefits to port forwarding, sure, but for my case where I'm just running my own services for myself, this is the simplest method for my case. And as a dear mentor of mine said:
+The reasoning for tailscale instead of something like setting up port forwarding is because if its setup by a noob (ahem), it can cause security vulnerabilities for a home network.
+
+^^^ Real-world case: my friend has an mc server port-forwarded. Within days random people started joining...
+
+Using tailscale, the server's access to the internet (my other devices) is very tightly controlled and in a way that even I could easily manage it through an app or a single command, `sudo tailscale up/down`. There are benefits to port forwarding, sure, but for my case where I'm just running my own services for myself, this is the simplest method for my case. And as a dear mentor of mine said:
 > "Simplicity scales, complexity fails!"
 
 This solution just requires me to connect to the tailnet and that's it - getting in between that, or heck even getting access points is pretty much impossible (as far as I know, but I frankly have a lot to learn) - the only way to access the server as a hacker ("bad actor" for the snotty nerds out there) is to find my tailnet account and get into it, which I guess they can have fun with. Honestly, even if they get the tailnet ip, they'd still need to get the credentials for the server itself :/
