@@ -39,27 +39,10 @@ https://www.instagram.com/reel/DWWaTlZEdoG/
 ### FILE STRUCTURE
 
 ```
-├── services
-│   ├── immich
-│   │   └── immich-app
-│   ├── jellyfin
-│   │   ├── (dont worry bout this)
-│   │   ├── jellyfin
-│   │   ├── (dont worry bout this)
-│   │   ├── (dont worry bout this)
-│   │   ├── (dont worry bout this)
-│   │   └── (dont worry bout this)
-│   ├── minecraft
-│   │   └── minecraft
-│   ├── portainer
-│   └── tailscale
+└── services
+│   └── each service has its own directory with its docker compose, etc
 └── storage
-    ├── immich
-    │   ├── media
-    │   └── postgres
-    └── jellyfin
-        ├── media
-        └── (dont worry bout this)
+    └── services like immich, jellyfin, tandoor have on-server databases, so postres, media directories - thats here.
 ```
 
 ### CONNECTION SCHEME
@@ -89,6 +72,8 @@ Here's a small list of services and some details on why I use it.
 |---|---|---|
 | Jellyfin | media streaming | For streaming.. legally acquired.. stuff. Don't ask, don't tell. |
 | Immich | photo backup/library | Replacement for google photos. |
+| Tandoor | Recipe manager | Supper cool service that allows me to save recipes and share them and know what to get etc etc, seeing as ive been putting off learning how to look for a while, this is straight gold! Eventually I hope to get some other people on my instance and have them share recipes there too! Amazing for meal prep and stuff too!!! Hella excited to use this |
+| Vikunja | Todo list | Unfortunately I gotta say goodbye to Todoist - i really liked it.. but for more security I gotta opt for the self hosted option.. I chose this cuz I needed a todo list that syncs accross mobile and desktop - thats just convenient for me. Todoist did it well, but yknow.. paid model.. sign in.. thats just an ick in 2026. Note to self: maybe help out with their mobile app; its still pretty early in development. |
 | Minecraft server | game server for friends | This was the first thing I did. We don't use it anymore, we set it up on another server, but regardless it was a decent experience. 6/10. |
 | Portainer | container management/monitoring | Just a cool webUI for managing containers I heard of and wanted to try. |
 | Tailscale | VPN | Alternative to port forwarding - no exposed ports. Like my own personal internet on the internet! Cool tech honestly. |
