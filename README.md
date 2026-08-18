@@ -55,7 +55,7 @@ Device (laptop, phone) <---------------> Router (home) <---------------> Server
 
 Otherwise, I SSH via my tailnet (which uses wireguard protocol for e2e which is cool!):
 
-Device (laptop, phone) <---------------> Router <---------------> Tailscale servers <---------------> Router (home) <---------------> Server
+Device (laptop, phone) <----> Router <----> Tailscale servers <----> Router (home) <----> Server
 
 The reasoning for tailscale instead of something like setting up port forwarding is because if its setup by a noob (ahem), it can cause security vulnerabilities for a home network. Using tailscale, the server's access to the internet (my other devices) is very tightly controlled and in a way that even I could easily manage it through an app or a single command, `sudo tailscale up/down`. There are benefits to port forwarding, sure, but for my case where I'm just running my own services for myself, this is the simplest method for my case. And as a dear mentor of mine said:
 > "Simplicity scales, complexity fails!"
