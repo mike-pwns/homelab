@@ -61,7 +61,7 @@ The reasoning for tailscale instead of something like setting up port forwarding
 
 ^^^ Real-world case: my friend has an mc server port-forwarded. Within days random people started joining...
 
-Using tailscale, the server's access to the internet (my other devices) is very tightly controlled and in a way that even I could easily manage it through an app or a single command, `sudo tailscale up/down`. There are benefits to port forwarding, sure, but for my case where I'm just running my own services for myself, this is the simplest method for my case. And as a dear mentor of mine said:
+Using tailscale, the server's access to the internet (my other devices) is very tightly controlled and in a way that even I could easily manage it through an app or a single command, `sudo tailscale up/down`. There are benefits to port forwarding, sure, but for my case where I'm just running my own services for myself, this is the simplest method. And as a dear mentor of mine says:
 > "Simplicity scales, complexity fails!"
 
 This solution just requires me to connect to the tailnet and that's it - getting in between that, or heck even getting access points is pretty much impossible (as far as I know, but I frankly have a lot to learn) - the only way to access the server as a hacker ("bad actor" for the snotty nerds out there) is to find my tailnet account and get into it, which I guess they can have fun with. Honestly, even if they get the tailnet ip, they'd still need to get the credentials for the server itself :/
@@ -74,7 +74,7 @@ Here's a small list of services and some details on why I use it.
 
 | Service | Purpose | Why |
 |---|---|---|
-| Jellyfin | media streaming | For streaming.. legally acquired.. stuff. Don't ask, don't tell. |
+| Jellyfin | media streaming | For streaming.. legally acquired.. stuff. In reality, using streaming services are usually my go to - I only really keep movies or shows that I adore/connected with deeply. Just feels more right for things I love - being able to access it whenever - to actually HAVE the stuff rather than just request it from another server. Shoutout Cyberpunk, Ghibli movies, Брат / Брат 2, The Matrix series. |
 | Immich | photo backup/library | Replacement for google photos. |
 | Tandoor | Recipe manager | Supper cool service that allows me to save recipes and share them and know what to get etc etc, seeing as ive been putting off learning how to look for a while, this is straight gold! Eventually I hope to get some other people on my instance and have them share recipes there too! Amazing for meal prep and stuff too!!! Hella excited to use this |
 | Vikunja | Todo list | Unfortunately I gotta say goodbye to Todoist - i really liked it.. but for more security I gotta opt for the self hosted option.. I chose this cuz I needed a todo list that syncs accross mobile and desktop - thats just convenient for me. Todoist did it well, but yknow.. paid model.. sign in.. thats just an ick in 2026. Note to self: maybe help out with their mobile app; its still pretty early in development. |
@@ -120,7 +120,9 @@ Here's a small list of services and some details on why I use it.
 
 ## KNOWN GAPS / ROADMAP
 
-- theres only 1 drive, 
+- theres only 1 drive, no backups yet
+- tailscale isnt as hardened as it can be
+- there were more but i forgot them
 
 // bullet list, plain and honest:
 //   - no automated backups for Immich
