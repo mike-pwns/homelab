@@ -42,7 +42,7 @@ https://www.instagram.com/reel/DWWaTlZEdoG/
 └── services
 │   └── each service has its own directory with its docker compose, etc
 └── storage
-    └── services like immich, jellyfin, tandoor have on-server databases, so postres, media directories - thats here.
+    └── services like immich, jellyfin, tandoor have on-server databases, so postgres, media directories - thats here.
 ```
 
 ### CONNECTION SCHEME
