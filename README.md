@@ -36,6 +36,8 @@ b) friend pushed me to do it - I was gonna do it either way but I did it sooner 
 - **Storage:** 1 TB (WDC WD1002FAEX-00Y9A0)
 - **GPU:** NVIDIA GeForce GTX 1050
 
+---
+
 ### FILE STRUCTURE
 
 ```
@@ -44,6 +46,8 @@ b) friend pushed me to do it - I was gonna do it either way but I did it sooner 
 └── storage
     └── services like immich, jellyfin, tandoor have on-server databases, so postgres, media directories - thats here.
 ```
+
+---
 
 ### CONNECTION SCHEME
 
