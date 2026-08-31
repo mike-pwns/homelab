@@ -22,7 +22,7 @@ b) friend pushed me to do it - I was gonna do it either way but I did it sooner 
 
 (also [its just not appropriate as a grown man to backup your data on the cloud](https://www.tiktok.com/@sandboxsessions/video/7611533386473114893))
 
-https://www.instagram.com/reel/DWWaTlZEdoG/
+(bonus giggle: https://www.instagram.com/reel/DWWaTlZEdoG/)
 
 ---
 
@@ -77,66 +77,45 @@ Here's a small list of services and some details on why I use it.
 | Jellyfin | media streaming | For streaming.. legally acquired.. stuff. In reality, using streaming services are usually my go to - I only really keep movies or shows that I adore/connected with deeply. Just feels more right for things I love - being able to access it whenever - to actually HAVE the stuff rather than just request it from another server. Shoutout Cyberpunk, Ghibli movies, Брат / Брат 2, The Matrix series. |
 | Immich | photo backup/library | Replacement for google photos. |
 | Tandoor | Recipe manager | Supper cool service that allows me to save recipes and share them and know what to get etc etc, seeing as ive been putting off learning how to look for a while, this is straight gold! Eventually I hope to get some other people on my instance and have them share recipes there too! Amazing for meal prep and stuff too!!! Hella excited to use this |
-| Vikunja | Todo list | Unfortunately I gotta say goodbye to Todoist - i really liked it.. but for more security I gotta opt for the self hosted option.. I chose this cuz I needed a todo list that syncs accross mobile and desktop - thats just convenient for me. Todoist did it well, but yknow.. paid model.. sign in.. thats just an ick in 2026. Note to self: maybe help out with their mobile app; its still pretty early in development. |
+| ~~Vikunja~~ | ~~Todo list~~ | ~~Unfortunately I gotta say goodbye to Todoist - i really liked it.. but for more security I gotta opt for the self hosted option.. I chose this cuz I needed a todo list that syncs accross mobile and desktop - thats just convenient for me. Todoist did it well, but yknow.. paid model.. sign in.. thats just an ick in 2026. Note to self: maybe help out with their mobile app; its still pretty early in development.~~  Genuinely unusable right now, just going to continue using Todoist until either I make my own app, or this improves |
 | Minecraft server | game server for friends | This was the first thing I did. We don't use it anymore, we set it up on another server, but regardless it was a decent experience. 6/10. |
 | Portainer | container management/monitoring | Just a cool webUI for managing containers I heard of and wanted to try. |
 | Tailscale | VPN | Alternative to port forwarding - no exposed ports. Like my own personal internet on the internet! Cool tech honestly. |
 
 ---
 
-## DEPLOYMENT
-
-// sanitized docker-compose.yml lives in this repo, .env.example shows variable names only
-// briefly note how you deploy/update (docker compose up -d, Portainer stacks, etc)
-// do NOT include real ports/IPs/tokens here — link to docker-compose.yml instead
-
----
-
-## CONTAINER ISOLATION
-
-// are services on separate docker networks, or all on the default bridge?
-// do any containers run as root unnecessarily?
-// if you haven't segmented anything yet, say so — that's a legitimate current-state note,
-// not something to hide
-
----
-
 ## BACKUPS
 
-// does Immich (actual irreplaceable data — photos) get backed up anywhere?
-// if no backup exists yet, write that explicitly as a known risk, not silence
-
+Currently no backups exist, but that is something I'm looking to do (when I run into $$$).
+- immich needs backup
+- jellyfin not as urgently
+  
 ---
 
-## SECURITY NOTES
+## SECURITY NOTES + KNOWN GAPS
 
-// SSH: key-only auth? password auth disabled? non-standard port? fail2ban?
-// firewall: ufw/iptables rules, or relying entirely on Tailscale's network isolation?
-// update strategy: are images pinned to specific versions or floating on `latest`?
-// this section is what turns "homelab" into "homelab with a security mindset" —
-// don't skip it even if the honest answer to most of these is "not yet configured"
-
+super brief notes for now, need to learn actual security to do this properly
+- ssh key-only auth
+- need to config firewall (is tailscale network isolation good enough?)
+- auto update images?
+- docker isolation (i heard thats good)
+- bunch of other stuff not configged yet (again, need to learn)
+  
 ---
 
-## KNOWN GAPS / ROADMAP
+## ROADMAP / NEXT STEPS / TODO
 
-- theres only 1 drive, no backups yet
-- tailscale isnt as hardened as it can be
-- there were more but i forgot them
-
-// bullet list, plain and honest:
-//   - no automated backups for Immich
-//   - all containers on default bridge network, no segmentation
-//   - no monitoring/alerting beyond Portainer dashboard
-//   - image versions not pinned
-//   - (add your real ones)
-
-recommendation: this list is more valuable to a reviewer than a clean feature list —
-it shows you can audit your own setup honestly
+- remove minecraft server; its unused
+- fix "more convenient jellyfin media acquisition" pipeline
+- move service account info outside of text files
+- look into firewall
+- setup cronjob for updating system + app updates (like updating images)
+- setup obsidian(?)
+- figure out what i should learn security-wise
 
 ---
 
 ## CREDITS / NOTES
 
-// optional — anything you built following a specific guide, friend's help, etc
-// keep it honest, same way you did in your other repo
+- thank you friend!
+- will add more stuff as I go along with this
