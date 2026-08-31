@@ -2,7 +2,7 @@
 > 
 > Project Status: ONLINE
 > 
-> Next Step: finish this doc --> setup vikanja
+> Next Step: nothing going on at the moment, just using the services :P
 
 # homelab
 
